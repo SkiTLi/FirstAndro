@@ -12,6 +12,7 @@
  * Т. е. ваша активити будет иметь след элементы:
  * TextView - 2 штуки
  * Button - 1 штука
+ *
  */
 
 package com.example.user_pc.testsktl;
