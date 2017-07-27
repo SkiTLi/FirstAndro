@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.classwork2.Classwork2Activity;
 import com.example.user_pc.testsktl.homework1.Dz1Activity;
+import com.example.user_pc.testsktl.homework2.HW2Activity;
 
 /**
  * Created by USER-PC on 26.07.2017.
@@ -37,15 +38,30 @@ public class MainActivity extends Activity {
             }
         });
 
-        Button classwork2Button = (Button) findViewById(R.id.classwork2Button);
+        Button classWork2Button = (Button) findViewById(R.id.classwork2Button);
 
-        classwork2Button.setOnClickListener(new View.OnClickListener() {
+        classWork2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //переход на новую активити
 
                 //нужно указать MainActivity. иначе ошибка т.к. находимся в анонимном классе
                 Intent intent = new Intent(MainActivity.this, Classwork2Activity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+        Button homeWork2Button = (Button) findViewById(R.id.hw_2Button);
+
+        homeWork2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //переход на новую активити
+
+                //нужно указать MainActivity. иначе ошибка т.к. находимся в анонимном классе
+                Intent intent = new Intent(MainActivity.this, HW2Activity.class);
                 startActivity(intent);
 
 

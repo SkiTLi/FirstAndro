@@ -22,6 +22,8 @@
 
         <activity android:name=".classwork2.Classwork2Activity"/>
 
+        <activity android:name=".homework2.HW2Activity"/>
+
 
 
     </application>

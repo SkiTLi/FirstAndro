@@ -10,12 +10,18 @@
         android:id="@+id/dz1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="dz1(hw1)" />
+        android:text="hw1" />
 
     <Button
         android:id="@+id/classwork2Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="cw2" />
+
+    <Button
+        android:id="@+id/hw_2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hw2" />
 
 </LinearLayout>
