@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">testSktl</string>
+    <string name="Text_one">long long</string>
+    <string name="Text_two">merce</string>
+    <string name="chenger_Button">CHANGE!</string>  <!--кенкен-->
+    <string name="classwork2_username">Имя</string>  <!--енк-->
+    <string name="classwork2_login">Логин</string>  <!--кенк-->
+
+
+
+</resources>

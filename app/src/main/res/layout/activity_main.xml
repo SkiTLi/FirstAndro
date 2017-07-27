@@ -3,28 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    android:layout_width="match_parent">
+
 
     <Button
-        android:id="@+id/hello_button"
-        android:layout_width="match_parent"
+        android:id="@+id/dz1Button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello" />
-
-    <TextView
-        android:id="@+id/first_textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Text_one" />
-
-    <TextView
-        android:id="@+id/second_textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Text_two" />
+        android:text="dz1(hw1)" />
 
     <Button
-        android:id="@+id/chenge_button2"
-        android:layout_width="match_parent"
+        android:id="@+id/classwork2Button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/chenger_Button" />
+        android:text="cw2" />
+
 </LinearLayout>

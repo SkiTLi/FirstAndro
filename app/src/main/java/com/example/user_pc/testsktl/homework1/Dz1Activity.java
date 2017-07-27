@@ -12,28 +12,32 @@
  * Т. е. ваша активити будет иметь след элементы:
  * TextView - 2 штуки
  * Button - 1 штука
- *
  */
 
-package com.example.user_pc.testsktl;
+package com.example.user_pc.testsktl.homework1;
 
 import android.app.Activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements OnClickListener {
+import com.example.user_pc.testsktl.R;
+
+public class Dz1Activity extends Activity implements OnClickListener {
 
     private Button helloButton;
     private int i;
 
+    public static final String KEY_USERNAME = "////USER////";
+    public static final String KEY_PASSWORD = "**PASSWORD**";
+
     private Button changeButton;
+    private TextView usernameTextView;
+    private TextView passwordTextView;
     private TextView firstTextView;
     private TextView secondTextView;
     private String str;
@@ -42,6 +46,13 @@ public class MainActivity extends Activity implements OnClickListener {
         str = (String) firstTextView.getText();
         firstTextView.setText(secondTextView.getText());
         secondTextView.setText(str);
+
+
+        String username =  getIntent().getStringExtra(KEY_USERNAME);
+        String password = getIntent().getStringExtra(KEY_PASSWORD);
+
+        usernameTextView.setText(usernameTextView.getText()+" "+username);
+        passwordTextView.setText(passwordTextView.getText()+" "+password+" :)");
     }
 
     @Override
@@ -49,7 +60,11 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_hw1);
+
+        usernameTextView = findViewById(R.id.username_TextView);
+        passwordTextView = findViewById(R.id.password_TextView);
+
         Log.d("Tag_Example", "Message_example");
         helloButton = (Button) findViewById(R.id.hello_button);
 
@@ -65,7 +80,7 @@ public class MainActivity extends Activity implements OnClickListener {
         firstTextView = findViewById(R.id.first_textView);
         secondTextView = findViewById(R.id.second_textView2);
 
-        //через анонимный класс
+        //через анонимный класс//немного сделано не так у тимофея
         OnClickListener listener = new OnClickListener() {
             @Override
             public void onClick(View view) {
