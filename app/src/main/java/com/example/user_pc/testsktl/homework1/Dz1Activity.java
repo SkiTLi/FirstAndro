@@ -62,8 +62,8 @@ public class Dz1Activity extends Activity implements OnClickListener {
 
         setContentView(R.layout.activity_hw1);
 
-        usernameTextView = findViewById(R.id.username_TextView);
-        passwordTextView = findViewById(R.id.password_TextView);
+        usernameTextView = (TextView) findViewById(R.id.username_TextView);
+        passwordTextView = (TextView) findViewById(R.id.password_TextView);
 
         Log.d("Tag_Example", "Message_example");
         helloButton = (Button) findViewById(R.id.hello_button);
@@ -77,8 +77,8 @@ public class Dz1Activity extends Activity implements OnClickListener {
 
 
         changeButton = (Button) findViewById(R.id.chenge_button2);
-        firstTextView = findViewById(R.id.first_textView);
-        secondTextView = findViewById(R.id.second_textView2);
+        firstTextView = (TextView) findViewById(R.id.first_textView);
+        secondTextView = (TextView) findViewById(R.id.second_textView2);
 
         //через анонимный класс//немного сделано не так у тимофея
         OnClickListener listener = new OnClickListener() {

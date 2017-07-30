@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--эта строка для атрибутов для андроид-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#d4aae6" />
+
+
+    <corners android:radius="100dp" />
+
+    <stroke android:color="#1551e4" android:width="5dp"/>
+
+</shape>

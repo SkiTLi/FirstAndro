@@ -24,4 +24,15 @@
         android:layout_height="wrap_content"
         android:text="hw2" />
 
+    <Button
+        android:id="@+id/classwork3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cw3" />
+    <Button
+        android:id="@+id/homework3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hw3" />
+
 </LinearLayout>

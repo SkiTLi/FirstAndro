@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user_pc.testsktl">
 
+
+    <!--без этого не загрузит картинка-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--в этой строчке происходит привязка к основной активити-->
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +26,13 @@
 
         <activity android:name=".homework1.Dz1Activity" /><!-- сокращенное-->
 
-        <activity android:name=".classwork2.Classwork2Activity"/>
+        <activity android:name=".classwork2.Classwork2Activity" />
 
-        <activity android:name=".homework2.HW2Activity"/>
+        <activity android:name=".homework2.HW2Activity" />
 
+        <activity android:name=".classwork3.Classwork3Activity" />
+
+        <activity android:name=".homework3.HW3Activity" />
 
 
     </application>
