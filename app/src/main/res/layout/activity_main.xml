@@ -29,10 +29,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="cw3" />
+
     <Button
         android:id="@+id/homework3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="hw3" />
 
+
+    <Button
+        android:id="@+id/classwork4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cw4" />
+
+    <Button
+        android:id="@+id/homework4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hw4" />
+
+    <Button
+        android:id="@+id/classwork5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cw5" />
+
+    <Button
+        android:id="@+id/homework5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hw5" />
+
+    <Button
+        android:id="@+id/classwork6Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cw6" />
 </LinearLayout>

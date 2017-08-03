@@ -32,6 +32,7 @@ public class Classwork2Activity extends Activity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                только так нужно передовать инфу в активити через интент
                 Intent intent = new Intent(Classwork2Activity.this, Dz1Activity.class);
                 intent.putExtra(Dz1Activity.KEY_USERNAME, username.getText().toString());
                 intent.putExtra(Dz1Activity.KEY_PASSWORD, password.getText().toString());
