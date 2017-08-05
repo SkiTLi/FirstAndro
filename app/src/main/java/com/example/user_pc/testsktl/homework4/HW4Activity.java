@@ -33,6 +33,7 @@ package com.example.user_pc.testsktl.homework4;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
@@ -54,6 +55,9 @@ import java.util.Calendar;
 
 public class HW4Activity extends Activity {
 
+
+
+    AnimationDrawable  mAnimationDrawable;
     private TextView clockTextView;
     private SktlClockView clockView;
 
@@ -65,10 +69,44 @@ public class HW4Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hw4_anim);
+
+
+
+
+
+
+
+
+
         clockTextView= (TextView) findViewById(R.id.clock_textView);
         clockView = (SktlClockView) findViewById(R.id.clock_View);
         clockTextView.setText("x = "+clockView.x+", y = "+clockView.y+"," +
                 " время = "+clockView.timeHour+ " /*/ "+clockView.timeMin+ " /*/ "+clockView.timeSec);
+
+
+
+
+
+
+        ImageView imageView = (ImageView) findViewById(R.id.owl_imageView);
+//        imageView.setBackgroundResource(R.drawable.sova_anmation_1);
+
+        mAnimationDrawable = (AnimationDrawable) imageView.getBackground();
+
+        final Button btnStart = (Button) findViewById(R.id.start_button);
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mAnimationDrawable.start();
+            }
+        });
+
+        final Button btnStop = (Button) findViewById(R.id.stop_button);
+        btnStop.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mAnimationDrawable.stop();
+            }
+        });
+
 
 
 

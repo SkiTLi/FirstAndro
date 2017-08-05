@@ -22,14 +22,14 @@
  * но в каждой из них это делается по своему, поэтому читайте документацию.
  */
 
-package com.example.user_pc.testsktl.homework3;
+package com.example.user_pc.testsktl.homework3_glide;
 
 import android.app.Activity;
-import android.app.Application;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -42,9 +42,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.user_pc.testsktl.BuildConfig;
 import com.example.user_pc.testsktl.R;
-import com.squareup.leakcanary.LeakCanary;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Request;
 
 
 public class HW3Activity extends Activity implements OnClickListener {
@@ -76,16 +73,18 @@ public class HW3Activity extends Activity implements OnClickListener {
     //через имплемент интерфейса
     @Override
     public void onClick(View view) {
-
+        //строка из gradle походу
         gradleStrTextView.setText(BuildConfig.API_ENDPOINT);
 
-        //// (старая версия 3) glide
-
-        Glide.with(this).load(url)
+        //// (старая версия 3) glide и делает круглой
+        Log.d("AAA", this.toString());
+        Glide.with(this)
+                .load(url)
                 .asBitmap()
                 .placeholder(R.drawable.ic_cloud_download_black_24dp)//отбражаетя во время загрузки
                 .error(R.drawable.ic_error_black_24dp)//заглушка в случае ошибки
                 .centerCrop()
+                //  .into(picImageView) ;//просто загрузка картинки без скругления
                 .into(new BitmapImageViewTarget(picImageView) {
                     @Override
                     protected void setResource(Bitmap resource) {

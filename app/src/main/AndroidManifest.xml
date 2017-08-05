@@ -37,7 +37,7 @@
         <activity android:name=".classwork2.Classwork2Activity" />
         <activity android:name=".homework2.HW2Activity" />
         <activity android:name=".classwork3.Classwork3Activity" />
-        <activity android:name=".homework3.HW3Activity" />
+        <activity android:name=".homework3_glide.HW3Activity" />
         <activity android:name=".classwork4.Classwork4Activity" />
         <activity android:name=".homework4.HW4Activity" />
         <activity android:name=".classwork5.Classwork5Activity" />
@@ -53,14 +53,18 @@
 
         <service android:name=".classwork5.MyServiceSktl" />
         <service android:name=".classwork5.MyIntentService" />
-
-        <activity android:name=".homework5.HW5Activity" />
-        <activity android:name=".classwork6.Classwork6Activity" />
-
         <service
             android:name=".homework5.SktlServiceOnBCR"
             android:enabled="true"
             android:exported="true"></service>
+
+        <activity android:name=".homework5.HW5Activity" />
+        <activity android:name=".classwork6.Classwork6Activity" />
+
+        <activity android:name=".homework6_gallery.HW6Activity" />
+        <activity android:name=".classwork7.Classwork7Activity" />
+
+
     </application>
 
 </manifest>

@@ -7,118 +7,77 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.TextView;
 
 import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.classwork5.MyIntentService;
 import com.example.user_pc.testsktl.classwork5.MyServiceSktl;
 
+import java.util.ArrayList;
+
 /**
  * Created by USER-PC on 26.07.2017.
  */
 
 public class Classwork6Activity extends Activity {
-    IntentFilter intentFilter = new IntentFilter();
-    private TextView tw;
-    int i;
-
-    private BroadcastReceiver receiverSktl = new BroadcastReceiver() {
-        public void onReceive(Context context, Intent intent) {
-            Log.e("AAA тестовое сообщ", "onReceive");
-//            intentFilter.
-
-        }
-    };
+    private RecyclerView recyclerView;
+    private ArrayList<String> stringArrayList = new ArrayList<>();
+    private ArrayList<String> imageLinkArrayList = new ArrayList<>();
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_classwork5);
-//        здесь прописываеим реивер который работает только во время работы приложеия
-
-        Intent intent = new Intent(Classwork6Activity.this, MyIntentService.class);
-        intent.putExtra(MyIntentService.KEY_ACtION, "задание 0");
-        startService(intent);
-
-        Intent intent2 = new Intent(Classwork6Activity.this, MyIntentService.class);
-        intent2.putExtra(MyIntentService.KEY_ACtION, "задание 2");
-        startService(intent2);
-
-        Intent intent3 = new Intent(Classwork6Activity.this, MyIntentService.class);
-        intent3.putExtra(MyIntentService.KEY_ACtION, "задание 3");
-        startService(intent3);
+        setContentView(R.layout.activity_classwork6);//создается иерархия классов
 
 
-
-        tw = (TextView) findViewById(R.id.BC_textView);
-
-
-//        сервисы нужно запускать. два раза его запустить нельзя
-
-
-        startService(new Intent(this, MyServiceSktl.class));
+        //это под вопросом
+//        drawableArrayList.add(R.drawable.sova_anmation_1);
+//        drawableArrayList.add(R.drawable.sova_anmation_2);
+//        drawableArrayList.add(R.drawable.sova_anmation_3);
 
 
-//        по нажатию на текс вью будет завершен сервис
-        tw.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-//                Intent intent = new Intent (Classwork5Activity.this, MyServiceSktl.class);
-//                stopService(intent);
+        stringArrayList.add("что-то 1");
+        stringArrayList.add("что-то 2");
+        stringArrayList.add("что-то 3");
+        stringArrayList.add("что-то 4");
+        stringArrayList.add("что-то 5");
+        stringArrayList.add("что-то 6");
+        stringArrayList.add("что-то 7");
+        stringArrayList.add("что-то 8");
+        stringArrayList.add("что-то 9");
+        stringArrayList.add("что-то 10");
+        stringArrayList.add("что-то 11");
+        stringArrayList.add("что-то 12");
+        stringArrayList.add("что-то 13");
+        stringArrayList.add("что-то 14");
+        stringArrayList.add("что-то 15");
+        stringArrayList.add("что-то 16");
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_View);
 
+        //        один из менеджеров:
+        // походу здесь задается прокрутка
+//        GridLayoutManager
+//        StaggeredGridLayoutManager
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //        можно горизонтально расположить
+        //        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL);
+        recyclerView.setLayoutManager(layoutManager);
 
-            }
-        });
+        ClassWork6Adapter adapter = new ClassWork6Adapter(stringArrayList);
+
+        recyclerView.setAdapter(adapter);
     }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-        intentFilter.addAction(MyIntentService.MY_ACtION); // для получения
-//        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);//можно еще другие события
-
-
-
-        registerReceiver(receiverSktl, intentFilter);
-
-Intent intent = new Intent(Classwork6Activity.this, MyServiceSktl.class);
-
-        bindService(intent,serviceConnecion, Context.BIND_AUTO_CREATE);
-        i++;
-        tw.setText("i = " + i);
-
-    }
-    ServiceConnection serviceConnecion = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.e("AAA","onServiceConnected");
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            Log.e("AAA","onServiceDisconnected");
-        }
-    };
-    @Override
-    protected void onStop() {
-        super.onStop();
-        unregisterReceiver(receiverSktl);
-        unbindService(serviceConnecion);
-
-    }
-
-
-
-
-//это когда нет анонимного бродкаста
-//    private MyBroadcastReceiverSktl receiverSktl = new MyBroadcastReceiverSktl();
 }

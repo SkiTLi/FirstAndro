@@ -13,11 +13,13 @@ import com.example.user_pc.testsktl.classwork3.Classwork3Activity;
 import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
 import com.example.user_pc.testsktl.classwork5.Classwork5Activity;
 import com.example.user_pc.testsktl.classwork6.Classwork6Activity;
+import com.example.user_pc.testsktl.classwork7.Classwork7Activity;
 import com.example.user_pc.testsktl.homework1.Dz1Activity;
 import com.example.user_pc.testsktl.homework2.HW2Activity;
-import com.example.user_pc.testsktl.homework3.HW3Activity;
+import com.example.user_pc.testsktl.homework3_glide.HW3Activity;
 import com.example.user_pc.testsktl.homework4.HW4Activity;
 import com.example.user_pc.testsktl.homework5.HW5Activity;
+import com.example.user_pc.testsktl.homework6_gallery.HW6Activity;
 
 /**
  * Created by USER-PC on 26.07.2017.
@@ -173,7 +175,24 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button homeWork6Button = (Button) findViewById(R.id.homework6Button);
+        homeWork6Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HW6Activity.class);
+                startActivity(intent);
+            }
+        });
 
+
+        Button classWork7Button = (Button) findViewById(R.id.classwork7Button);
+        classWork7Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Classwork7Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

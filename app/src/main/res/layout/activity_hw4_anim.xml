@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,7 +9,7 @@
     <com.example.user_pc.testsktl.homework4.SktlClockView
         android:id="@+id/clock_View"
         android:layout_width="wrap_content"
-        android:layout_height="450dp" />
+        android:layout_height="250dp" />
 
     <TextView
         android:id="@+id/clock_textView"
@@ -16,6 +17,25 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:text="clock_textViewTextView" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop" />
+
+    <ImageView
+        android:id="@+id/owl_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/owl_anim"/>
+
 
 
 </LinearLayout>
