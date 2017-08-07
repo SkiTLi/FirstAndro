@@ -14,6 +14,13 @@ import android.util.Log;
 
 public class SktlServiceOnBCR extends Service {
 
+
+    //см на фото
+    public String state = "off";
+    Intent intent = new Intent();
+
+
+
     SktlBroadcastReceiverCheckWiFi broadcastReceiverCheckWiFi = new SktlBroadcastReceiverCheckWiFi();
 
 
@@ -51,5 +58,6 @@ public class SktlServiceOnBCR extends Service {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(broadcastReceiverCheckWiFi, intentFilter);
+        //сенд в активити
     }
 }

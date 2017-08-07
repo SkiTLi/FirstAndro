@@ -143,6 +143,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HW4Activity.class);
                 startActivity(intent);
+                //это анимация по смене MainActivity.this на HW4Activity.class
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
 

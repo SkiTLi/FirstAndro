@@ -6,17 +6,21 @@
     android:orientation="vertical">
 
 
-    <com.example.user_pc.testsktl.homework4.SktlClockView
-        android:id="@+id/clock_View"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp" />
 
     <TextView
         android:id="@+id/clock_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_gravity="center"
         android:text="clock_textViewTextView" />
+
+    <com.example.user_pc.testsktl.homework4.SktlClockView
+        android:id="@+id/clock_View"
+        android:layout_width="200dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_height="200dp" />
 
     <Button
         android:id="@+id/start_button"
@@ -30,12 +34,12 @@
         android:layout_height="wrap_content"
         android:text="stop" />
 
+
     <ImageView
         android:id="@+id/owl_imageView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/owl_anim"/>
-
-
+        android:layout_gravity="center"
+        android:background="@drawable/owl_anim" />
 
 </LinearLayout>

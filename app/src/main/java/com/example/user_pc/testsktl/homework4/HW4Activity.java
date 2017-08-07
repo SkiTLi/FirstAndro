@@ -34,7 +34,9 @@ package com.example.user_pc.testsktl.homework4;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.view.View;
@@ -48,6 +50,7 @@ import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.user_pc.testsktl.BuildConfig;
 import com.example.user_pc.testsktl.R;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 //import com.bumptech.glide.request.RequestOptions;
@@ -55,37 +58,34 @@ import java.util.Calendar;
 
 public class HW4Activity extends Activity {
 
-
-
     AnimationDrawable  mAnimationDrawable;
     private TextView clockTextView;
     private SktlClockView clockView;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hw4_anim);
 
-
-
-
-
-
+//        Thread thread = new Thread(new Runnable() {
+////
+////
+//            @Override
+//
+//            public void run() {
+                setContentView(R.layout.activity_hw4_anim);
+//            }
+//        }).start;
 
 
 
         clockTextView= (TextView) findViewById(R.id.clock_textView);
+
+
         clockView = (SktlClockView) findViewById(R.id.clock_View);
+
+
         clockTextView.setText("x = "+clockView.x+", y = "+clockView.y+"," +
-                " время = "+clockView.timeHour+ " /*/ "+clockView.timeMin+ " /*/ "+clockView.timeSec);
-
-
-
-
+                "текущее время = "+clockView.timeHour+ " : "+clockView.timeMin+ " : "+clockView.timeSec);
 
 
         ImageView imageView = (ImageView) findViewById(R.id.owl_imageView);
@@ -107,9 +107,5 @@ public class HW4Activity extends Activity {
             }
         });
 
-
-
-
     }
-
 }

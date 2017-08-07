@@ -1,11 +1,5 @@
 package com.example.user_pc.testsktl.homework6_gallery;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,20 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.user_pc.testsktl.R;
-import com.example.user_pc.testsktl.classwork6.ClassWork6Adapter;
-import com.example.user_pc.testsktl.homework3_glide.HW3Activity;
-import com.squareup.leakcanary.LeakTraceElement;
 import com.squareup.picasso.Picasso;
 
-import java.net.URL;
 import java.util.ArrayList;
-
-import static java.lang.System.console;
-import static java.lang.System.load;
-import static java.security.AccessController.getContext;
 
 
 /**
@@ -40,6 +24,12 @@ public class HW6Adapter extends RecyclerView.Adapter<HW6Adapter.Holder> {
     private ArrayList<String> items;
     //    private ArrayList<Uri> images;
     private ArrayList<String> images;
+
+    public void setListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
+    private OnItemClickListener listener;
 
     public HW6Adapter(ArrayList<String> items, ArrayList<String> images) {
         this.items = items;
@@ -74,7 +64,7 @@ public class HW6Adapter extends RecyclerView.Adapter<HW6Adapter.Holder> {
     @Override
     public void onBindViewHolder(Holder holder, int position) {
         Log.d("AAA", "onBindViewHolder position()=" + position);
-        String item = items.get(position);
+        final String item = items.get(position);
 //        Uri image = images.get(position);
         String image = images.get(position);
 
@@ -85,11 +75,21 @@ public class HW6Adapter extends RecyclerView.Adapter<HW6Adapter.Holder> {
         Log.d("AAA", holder.textView.getContext().toString());
 
         Glide.with(holder.imageView3.getContext())
-                .load("http://community.comicbookresources.com/images/buttons/sortarrow-asc.png")
+                .load(image)
                 .placeholder(R.drawable.ic_cloud_download_black_24dp)//отбражаетя во время загрузки
                 .error(R.drawable.ic_error_black_24dp)//заглушка в случае ошибки
                 // .resize(55, 88)//подрезать
                 .into(holder.imageView3);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClick(item);
+                }
+            }
+        });
     }
 
     //количество элементов
@@ -97,6 +97,12 @@ public class HW6Adapter extends RecyclerView.Adapter<HW6Adapter.Holder> {
     public int getItemCount() {
 //        вот так это делается)))
         return items == null ? 0 : items.size();
+    }
+
+
+    //    для того чтобы повесить клик на вашресайклвью
+    interface OnItemClickListener {
+        public void onItemClick(String item);
     }
 
 

@@ -63,7 +63,7 @@ public class HW6Activity extends Activity {
             imageLinkString = "https://s-media-cache-ak0.pinimg.com/originals/53/87/df/5387df647ba703a0822ffb7c7be3bf86.jpg";
             imageLinkArrayList.add(Uri.parse(imageLinkString));
             imageStringArrayList.add(imageLinkString);
-            imageLinkString = "https://clck.ru/BZkF3";
+            imageLinkString = "https://images4.alphacoders.com/283/thumb-1920-283338.jpg";
             imageLinkArrayList.add(Uri.parse(imageLinkString));
             imageStringArrayList.add(imageLinkString);
             imageLinkString = "https://clck.ru/BZkFF";
@@ -85,13 +85,22 @@ public class HW6Activity extends Activity {
         // походу здесь задается прокрутка
         //  GridLayoutManager
         //  StaggeredGridLayoutManager
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);//когда нужно в линеечку
-//        GridLayoutManager layoutManager = new GridLayoutManager(this, 3);//а вот плитка как в дз
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);//когда нужно в линеечку
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);//а вот плитка как в дз (две колонки)
         //        можно горизонтально расположить
 //                LinearLayoutManager layoutManager = new LinearLayoutManager(this, HORIZONTAL, true);
         recyclerView.setLayoutManager(layoutManager);
 
         HW6Adapter adapter = new HW6Adapter(stringArrayList, imageStringArrayList);
+
+        adapter.setListener(new HW6Adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(String item) {
+                Log.e("FFF", item);//попросился final item
+            }
+        });
+
+
 
         recyclerView.setAdapter(adapter);
 
