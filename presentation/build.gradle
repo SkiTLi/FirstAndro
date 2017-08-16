@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'//подключает плагин
+
+android {
+    compileSdkVersion 25//под которой будет компиляция
+    buildToolsVersion '25.0.3'//это то же
+    defaultConfig {
+        //айди должнобыть уникальным и не обязательно иметь свой сайт
+        applicationId "com.example.user_pc.testsktl"
+        //айди под котором будет приложение в gplay и его можно поменять
+        minSdkVersion 17
+        targetSdkVersion 17
+        versionCode 1//числовой код для проггеров
+        versionName "1.0"//этобудет виднопользователям
+        //это для тестирования
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "API_ENDPOINT", '"эта строчка находится в gradle! прикинь!"'
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false //типа шифровки кода исходного
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {//  вместо   compile 'com.android.databinding:compiler:2.3.0' пока
+        enabled = true
+    }
+
+//сделать платный версию
+//    productFlavors{
+//        free{
+//            versionCode 1//числовой код для проггеров
+//            versionName "1.0-free"//этобудет виднопользователям
+//        }
+//        pay{
+//            versionCode 1//числовой код для проггеров
+//            versionName "1.0-pay"//этобудет виднопользователям
+//        }
+//    }
+    productFlavors {
+    }
+}
+
+repositories {//это для glide
+    mavenCentral() // jcenter() works as well because it pulls from Maven Central
+
+}
+
+
+
+dependencies {
+    ////здесь пишутся все библиотеки
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    ////говорит что подклчает все из папки либс
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    это для CjntextCompat
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+//эти библиотеки для recycleview например имеют обратную совместимость . + лучше не делать
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    ////это для пикасса
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    ////пару мегобайт ,просто дописать библиотеку и будет скачиваться в проект
+    ////это для LeakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+    ////это для glide
+//    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+//    compile 'com.android.support:support-v4:25.3.1'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+////это для glide (старая версия)
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.github.bumptech.glide:volley-integration:1.4.0@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.8'
+
+    annotationProcessor 'com.android.databinding:compiler:2.3.0'
+    //можно писать и двойные и одинарные ковочки
+
+    compile project(path: ':domain')
+//rx добавили
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+
+}

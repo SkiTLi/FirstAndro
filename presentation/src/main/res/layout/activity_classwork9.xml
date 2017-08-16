@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="java.lang.String" />
+
+        <import type="com.example.user_pc.testsktl.classwork9_10.Classwork9ViewModel.STATE" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.user_pc.testsktl.classwork9_10.Classwork9ViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <TextView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.name}"
+            android:visibility="@{viewModel.state != STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.sername}"
+            android:visibility="@{viewModel.state != STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
+
+        <!--android:visibility="@{activity.myText == null ? View.GONE : View.VISIBLE}"-->
+        <!--android:text="@{activity.myText}"-->
+
+        <TextView
+            android:id="@+id/age_TextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{String.valueOf(viewModel.age)}"
+            android:visibility="@{viewModel.state != STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
+        <!--это крутой прогрессбар-->
+        <!--свой прогрессбар делается ротэйтом-->
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:visibility="@{viewModel.state == STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
+
+        <Button
+            android:id="@+id/just_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="just" />
+        <!--&lt;!&ndash;android:background="@(activity.myGender) ? @android:color/colorAccent : @android:color/colorAccent"&ndash;&gt;-->
+
+
+        <!--android:onClick="@{()->viewModel.onSuperButtonClick()}" должен работать клик-->
+
+    </LinearLayout>
+</layout>

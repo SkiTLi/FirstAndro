@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+        <!--android:layout_width="match_parent">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#11111111"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/dz1Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw1,hw1" />
+
+            <Button
+                android:id="@+id/classwork2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw2" />
+
+            <Button
+                android:id="@+id/hw_2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw2 (flags)" />
+
+            <Button
+                android:id="@+id/classwork3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw3" />
+
+            <Button
+                android:id="@+id/homework3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw3 (Glide)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#22222222"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/classwork4Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw4" />
+
+            <Button
+                android:id="@+id/homework4Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw4 (clock,anim)" />
+
+            <Button
+                android:id="@+id/classwork5Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw5" />
+
+            <Button
+                android:id="@+id/homework5Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw5 (BCR,Service)" />
+
+            <Button
+                android:id="@+id/classwork6Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw6" />
+
+            <Button
+                android:id="@+id/homework6Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw6 (gallery)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33333333"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/classwork7Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw7" />
+
+
+            <Button
+                android:id="@+id/homework7Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw7 (MVVM1)" />
+
+            <Button
+                android:id="@+id/classwork8Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw8" />
+
+            <Button
+                android:id="@+id/classwork9Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw9,10" />
+
+            <Button
+                android:id="@+id/homework9Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw9 (new gallery)" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#44444444"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/homework10Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="hw10 (timer)" />
+
+            <Button
+                android:id="@+id/classwork11Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw11" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

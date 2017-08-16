@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--Используя android bindings модернизировать, то что уже сделали на занятии.-->
+
+<!--1) Вам необходимо создать страницу с профилем пользователя (дизайн любой)-->
+
+<!--на котором будет следующая инфа:-->
+
+<!--картинка юзера(грузить по ссылке), ФИО, возраст и пол-->
+
+<!--(если мужчина делать все в синих цветах, если девушка все в розовых-->
+
+<!--ну и любых других на свой вкус).-->
+
+<!--2) В активити создать объект User в котором будет все необходимые переменные-->
+
+<!--и заполнить его тестовыми данными.-->
+
+<!--3) Объект User передавать в xml (как это делали на занятии с активити).-->
+
+<!--4) Все данные внутри xml брать только с использованием android bindings из объекта User.-->
+
+<!--5) В активити не должно быть вообще никаких данных кроме строки с биндингом-->
+
+<!--и установкой User объекта в xml.-->
+
+<!--6) Картинка профиля юзера должны хранить в User в в виде String,-->
+
+<!--ссылка на картинку в интернете. B вот тут самое сложное и интересное:-->
+
+<!--вам нужно сделать так чтобы ImageView смог загрузить картинку используя либу(glide и тд)-->
+
+<!--получив в параметр src ссылку. В xml это должно выглядеть примерно так:-->
+
+<!--<ImageView-->
+
+<!--android:id="@+id/colorImage"-->
+
+<!--android:layout_width="wrap_parent"-->
+
+<!--android:layout_height="wrap_parent"-->
+
+<!--app:src="@{user.imageUrl}" />-->
+
+<!--Как это сделать есть тут: https://developer.android.com/topic/libraries-->
+
+<!--/data-binding/index.html в разделе Custom Setters.-->
+
+<!--До того как сделать с картинкой сделайте все остальное, что бы попутно потыкать-->
+
+<!--и разобраться, а потом когда все будет понятно сделайте с картинкой.-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:bind="http://schemas.android.com/apk/res-auto"-->
+    <!--здесь будем описывать переменные-->
+    <!--указываем классы к которым даем доступ-->
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="user"
+            type="com.example.user_pc.testsktl.homework7_mvvm.User" />
+
+        <variable
+            name="activity"
+            type="com.example.user_pc.testsktl.homework7_mvvm.HW7Activity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{user.gender ? @color/colorPrimary : @color/colorAccent}"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--user.gender ? @color/sktl : @color/textFlagsBackground-->
+        <!--android:background="@{myGender.equals()  ? @android:color :}"-->
+        <!--android:orientation="vertical">-->
+
+        <TextView
+            android:id="@+id/name_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.getName()}" />
+
+        <!--android:visibility="@{activity.myText == null ? View.GONE : View.VISIBLE}"-->
+        <!--android:text="@{activity.myText}"-->
+
+        <TextView
+            android:id="@+id/age_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(user.getAge())}" />
+
+
+        <!--&lt;!&ndash;android:background="@(activity.myGender) ? @android:color/colorAccent : @android:color/colorAccent"&ndash;&gt;-->
+        <ImageView
+            android:id="@+id/ava_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:srcSktl="@{user.getImage}" />
+
+        <Button
+            android:id="@+id/unGender_Buttot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity::unGenderA}"
+            android:text="Change hiro" />
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user_pc.testsktl">
+
+    <!-- без этого не загрузит картинка, это разрешение к интернету -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- позволяет сделать проверку подключения к интернету -->
+    <!-- еще это нужно для ресивера в данном занятии -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- для пользования gps -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- для канарейки android:name="com.example.user_pc.testsktl.SktlApplication" -->
+    <application
+        android:name=".SktlApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- в этой строчке происходит привязка к основной активити -->
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".homework1.Dz1Activity" /> <!-- сокращенное -->
+
+        <activity android:name=".classwork2.Classwork2Activity" />
+        <activity android:name=".homework2.HW2Activity" />
+        <activity android:name=".classwork3.Classwork3Activity" />
+        <activity android:name=".homework3_glide.HW3Activity" />
+        <activity android:name=".classwork4.Classwork4Activity" />
+        <activity android:name=".homework4.HW4Activity" />
+        <activity android:name=".classwork5.Classwork5Activity" />
+        <!-- это ресивер куда получать сообщения таких м б  много -->
+        <!-- здесь зазается только тогда когда вы хотите чтобы оно всегда рабатоло -->
+        <!-- <receiver android:name=".classwork5.MyBroadcastReceiverSktl"> -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash;проверка состояния wifi&ndash;&gt; -->
+        <!-- <action android:name="android.net.wifi.WIFI_STATE_CHANGED" /> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service android:name=".classwork5.MyServiceSktl" />
+        <service android:name=".classwork5.MyIntentService" />
+        <service
+            android:name=".homework5.SktlServiceOnBCR"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".homework5.HW5Activity" />
+        <activity android:name=".classwork6.Classwork6Activity" />
+
+        <activity android:name=".homework6_gallery.HW6Activity" />
+        <activity android:name=".classwork7.Classwork7Activity" />
+
+        <activity android:name=".homework7_mvvm.HW7Activity" />
+        <activity android:name=".classwork8.Classwork8Activity" />
+        <activity android:name=".classwork9_10.Classwork9Activity" />
+
+        <activity android:name=".homework9_new_gallery.HW9Activity" />
+        <activity android:name=".homework10_timer.HW10Activity" />
+        <activity android:name=".classwork11.Classwork11Activity" />
+
+    </application>
+
+</manifest>
