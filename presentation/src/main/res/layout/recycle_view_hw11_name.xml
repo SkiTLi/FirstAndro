@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="java.lang.String" />
+
+        <import type="com.example.user_pc.testsktl.homework11_profiles.HW11Activity" />
+        <import type="com.example.user_pc.testsktl.homework11_profiles.HW11ViewModel.STATE" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="com.example.user_pc.testsktl.homework11_profiles.HW11Activity"/>
+        <variable
+            name="viewModel"
+            type="com.example.user_pc.testsktl.homework11_profiles.HW11ViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/gallery_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:src="@drawable/ic_directions_walk_black_24dp" />
+
+        <TextView
+            android:id="@+id/gallery_textView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.name}"
+            android:visibility="@{viewModel.state != STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
+
+
+        <!--android:onClick="@{()->viewModel.onSuperButtonClick()}" должен работать клик-->
+
+    </LinearLayout>
+</layout>

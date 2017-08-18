@@ -28,7 +28,7 @@ public class PhotoUseCase extends UseCase<PhotoId,PhotoModel> {
     //получаем здесь профиль и отдаем его
     @Override
 //    protected ProfileModel buildUseCase() {
-    protected Observable<PhotoModel> buildUseCase() {
+    protected Observable<PhotoModel> buildUseCase(PhotoId param) {
         //получаем здесь профиль и отдаем его
 //тут делается запрос к слою data в котором дергается метод на сервере (REST)
 //        создаем  объект Profile который лежит в data

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.user_pc.testsktl.R;
-import com.example.user_pc.testsktl.classwork11.Classwork11Activity;
+import com.example.user_pc.testsktl.classwork12.Classwork12Activity;
 import com.example.user_pc.testsktl.classwork2.Classwork2Activity;
 import com.example.user_pc.testsktl.classwork3.Classwork3Activity;
 import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
@@ -16,9 +16,10 @@ import com.example.user_pc.testsktl.classwork5.Classwork5Activity;
 import com.example.user_pc.testsktl.classwork6.Classwork6Activity;
 import com.example.user_pc.testsktl.classwork7.Classwork7Activity;
 import com.example.user_pc.testsktl.classwork8.Classwork8Activity;
-import com.example.user_pc.testsktl.classwork9_10.Classwork9Activity;
+import com.example.user_pc.testsktl.classwork9_10_11.Classwork9Activity;
 import com.example.user_pc.testsktl.homework1.Dz1Activity;
 import com.example.user_pc.testsktl.homework10_timer.HW10Activity;
+import com.example.user_pc.testsktl.homework11_profiles.HW11Activity;
 import com.example.user_pc.testsktl.homework2.HW2Activity;
 import com.example.user_pc.testsktl.homework3_glide.HW3Activity;
 import com.example.user_pc.testsktl.homework4.HW4Activity;
@@ -249,15 +250,25 @@ public class MainActivity extends Activity {
             }
         });
 
-
-        Button classWork11Button = (Button) findViewById(R.id.classwork11Button);
-        classWork11Button.setOnClickListener(new View.OnClickListener() {
+        Button homeWork11Button = (Button) findViewById(R.id.homework11Button);
+        homeWork11Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Classwork11Activity.class);
+                Intent intent = new Intent(MainActivity.this, HW11Activity.class);
                 startActivity(intent);
             }
         });
+
+
+        Button classWork12Button = (Button) findViewById(R.id.classwork12Button);
+        classWork12Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Classwork12Activity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

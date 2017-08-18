@@ -3,18 +3,15 @@ package com.example.user_pc.testsktl.homework7_mvvm;
 import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.databinding.ObservableField;
-import android.databinding.generated.callback.OnClickListener;
+
+//import android.databinding.generated.callback.OnClickListener;
 import android.os.Bundle;
 import android.support.annotation.BoolRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 
 import com.example.user_pc.testsktl.R;
-import com.example.user_pc.testsktl.classwork8.Classwork8Activity;
 import com.example.user_pc.testsktl.databinding.ActivityHw7MvvmBinding;
 
 /**
@@ -29,11 +26,11 @@ public class HW7Activity extends Activity {
     User user2 = new User("Dr. Robert Bruce Banner", 35, "http://vignette2.wikia.nocookie.net/fictionalcrossover/images/d/d5/Hulk.png", true);
 
     public void unGenderA(View view) {
-      if( binding.getUser().equals(user)){
-          binding.setUser(user2);
-      } else {
-          binding.setUser(user);
-      }
+        if (binding.getUser().equals(user)) {
+            binding.setUser(user2);
+        } else {
+            binding.setUser(user);
+        }
         Log.d("sktl", "должен был смениться пол" + binding.getUser().getGender());
         Log.d("sktl", "должен был смениться пол " + user.getGender());
     }
@@ -43,13 +40,9 @@ public class HW7Activity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hw7_mvvm);
-
-
         binding.setActivity(this);
         binding.setUser(user);
-
     }
-
 
     @Override
     protected void onResume() {

@@ -5,13 +5,13 @@
 
         <import type="java.lang.String" />
 
-        <import type="com.example.user_pc.testsktl.classwork9_10.Classwork9ViewModel.STATE" />
+        <import type="com.example.user_pc.testsktl.classwork9_10_11.Classwork9ViewModel.STATE" />
 
         <import type="android.view.View" />
 
         <variable
             name="viewModel"
-            type="com.example.user_pc.testsktl.classwork9_10.Classwork9ViewModel" />
+            type="com.example.user_pc.testsktl.classwork9_10_11.Classwork9ViewModel" />
     </data>
 
     <LinearLayout
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="@{viewModel.sername}"
+            android:text="@{viewModel.surname}"
             android:visibility="@{viewModel.state != STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
 
         <!--android:visibility="@{activity.myText == null ? View.GONE : View.VISIBLE}"-->

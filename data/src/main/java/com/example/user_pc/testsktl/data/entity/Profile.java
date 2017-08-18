@@ -1,5 +1,7 @@
 package com.example.user_pc.testsktl.data.entity;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by USER-PC on 14.08.2017.
  */
@@ -8,8 +10,14 @@ package com.example.user_pc.testsktl.data.entity;
 //сюда будет парсить gson
 public class Profile implements DataModel {
 
+
+    @SerializedName("name")
     private String name;
-    private String sername;
+
+    @SerializedName("surname")
+    private String surname;
+
+    @SerializedName("age")
     private int age;
 
 
@@ -21,12 +29,12 @@ public class Profile implements DataModel {
         this.name = name;
     }
 
-    public String getSername() {
-        return sername;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSername(String sername) {
-        this.sername = sername;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public int getAge() {

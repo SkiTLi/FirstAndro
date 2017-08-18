@@ -144,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="cw9,10" />
+                android:text="cw9,10,11" />
 
             <Button
                 android:id="@+id/homework9Button"
@@ -171,11 +171,20 @@
                 android:text="hw10 (timer)" />
 
             <Button
-                android:id="@+id/classwork11Button"
+                android:id="@+id/homework11Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="cw11" />
+                android:text="hw11 (profiles)" />
+
+            <Button
+                android:id="@+id/classwork12Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw12" />
+
+
 
 
         </LinearLayout>

@@ -66,11 +66,12 @@
 
         <activity android:name=".homework7_mvvm.HW7Activity" />
         <activity android:name=".classwork8.Classwork8Activity" />
-        <activity android:name=".classwork9_10.Classwork9Activity" />
+        <activity android:name=".classwork9_10_11.Classwork9Activity" />
 
         <activity android:name=".homework9_new_gallery.HW9Activity" />
         <activity android:name=".homework10_timer.HW10Activity" />
-        <activity android:name=".classwork11.Classwork11Activity" />
+        <activity android:name=".classwork12.Classwork12Activity" />
+        <activity android:name=".homework11_profiles.HW11Activity" />
 
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.user_pc.testsktl.classwork11;
+package com.example.user_pc.testsktl.classwork12;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +12,12 @@ import com.example.user_pc.testsktl.base.BaseActivity;
 
 //
 ////продолжение темы mvvm
-public class Classwork11Activity extends BaseActivity {
+public class Classwork12Activity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_classwork11);
+        setContentView(R.layout.activity_classwork12);
     }
 }

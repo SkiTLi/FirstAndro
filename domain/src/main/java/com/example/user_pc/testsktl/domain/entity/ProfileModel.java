@@ -7,7 +7,7 @@ package com.example.user_pc.testsktl.domain.entity;
 
 public class ProfileModel implements DomainModel {
     private String name;
-    private String sername;
+    private String surname;
     private int age;
 
 
@@ -19,12 +19,12 @@ public class ProfileModel implements DomainModel {
         this.name = name;
     }
 
-    public String getSername() {
-        return sername;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSername(String sername) {
-        this.sername = sername;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public int getAge() {
