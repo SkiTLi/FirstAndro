@@ -260,15 +260,23 @@ public class MainActivity extends Activity {
         });
 
 
-        Button classWork12Button = (Button) findViewById(R.id.classwork12Button);
-        classWork12Button.setOnClickListener(new View.OnClickListener() {
+//        Button classWork12Button = (Button) findViewById(R.id.classwork12Button);
+//        classWork12Button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, Classwork12Activity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+
+        Button classwork12Button = (Button) findViewById(R.id.classwork12Button);
+        classwork12Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Classwork12Activity.class);
-                startActivity(intent);
+                Classwork12Activity.show(MainActivity.this);
             }
         });
-
 
     }
 

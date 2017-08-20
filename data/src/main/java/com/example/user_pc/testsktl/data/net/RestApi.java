@@ -15,15 +15,9 @@ import retrofit2.http.Path;
  */
 
 public interface RestApi {
-
-    //иудет в {} подкидываться id из строки снизу
-    //пока без параметров.<Profile> - тип данных в Observable
-//    @GET("data/profile?where=\"id={id}\"")//это все
-    @GET("data/profile")//это один
-//    Observable<List<Profile>> getProfiles(@Path("id\") String id);//yt работает
-//    Observable<List<Profile>> getProfiles(@Path("id") String id);//по их id //Query .s cltkfk
+    //возврощает все профили
+    @GET("data/profile")
     Observable<List<Profile>> getProfiles();
-
 
     @POST("data/profile")
     Observable<Void> saveProfile(@Body Profile profile);//d backendless должна появиться новая строка

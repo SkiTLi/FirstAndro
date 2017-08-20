@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</LinearLayout>
+
+<layout>
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+    <!--xmlns:bind="http://schemas.android.com/apk/res-auto"-->
+    <!--здесь будем описывать переменные-->
+    <!--указываем классы к которым даем доступ-->
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.example.user_pc.testsktl.classwork12.Classwork12ViewModel.STATE" />
+
+
+        <variable
+            name="viewModel"
+            type="com.example.user_pc.testsktl.classwork12.Classwork12ViewModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="#87c6ed"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}"/>
+
+
+        <!--app:adapter="@{viewModel.adapter}" не нужно здесь тк уже есть в другом месте-->
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.state == STATE.PROGRESS ? View.VISIBLE : View.GONE}"/>
+
+    </FrameLayout>
+
+</layout>

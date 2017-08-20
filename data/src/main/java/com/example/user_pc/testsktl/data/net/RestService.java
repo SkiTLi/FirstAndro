@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -31,15 +32,17 @@ public class RestService {
     }
 
     private void init() {
-        //         низкоуровневыйклиент для взаимодействия retrofit и http
-        //в домашке нужно сделать 3 usecase
 
-//        HttpLoggingInterceptor logging = new H //нужно добавить это ноне добавляется (это для того чтобы можно было смотеть логи)
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 //                .addInterceptor(logging)//не могу создать
                 .readTimeout(10, TimeUnit.SECONDS)//если в течении 10 сеунд ответа нет то запрос считать неправильным
                 .connectTimeout(10, TimeUnit.SECONDS)//если в течении 10 секнд не можем подключиться к серверу
+                .addInterceptor(logging)
                 .build();
         //библиотекадля парсинга
         Gson gson = new GsonBuilder().create();

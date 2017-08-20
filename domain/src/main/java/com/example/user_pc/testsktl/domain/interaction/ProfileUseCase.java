@@ -21,6 +21,7 @@ import io.reactivex.functions.Function;
 public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
 
 
+
     //получаем здесь профиль и отдаем его
     @Override
 //    protected ProfileModel buildUseCase() {

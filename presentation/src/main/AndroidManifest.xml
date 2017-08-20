@@ -70,8 +70,9 @@
 
         <activity android:name=".homework9_new_gallery.HW9Activity" />
         <activity android:name=".homework10_timer.HW10Activity" />
-        <activity android:name=".classwork12.Classwork12Activity" />
+
         <activity android:name=".homework11_profiles.HW11Activity" />
+        <activity android:name=".classwork12.Classwork12Activity" />
 
     </application>
 

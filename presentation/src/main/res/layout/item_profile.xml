@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:bind="http://schemas.android.com/apk/res-auto"-->
+    <!--здесь будем описывать переменные-->
+    <!--указываем классы к которым даем доступ-->
+
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.example.user_pc.testsktl.classwork12.ProfileItemViewModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="#aeff00"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{viewModel.name }" />
+
+
+    </FrameLayout>
+</layout>
