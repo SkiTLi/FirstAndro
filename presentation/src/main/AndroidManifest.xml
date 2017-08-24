@@ -9,8 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <!-- для пользования gps -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -73,6 +73,7 @@
 
         <activity android:name=".homework11_profiles.HW11Activity" />
         <activity android:name=".classwork12.Classwork12Activity" />
+        <activity android:name=".classwork13.Classwork13Activity" />
 
     </application>
 

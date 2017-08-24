@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.classwork12.Classwork12Activity;
+import com.example.user_pc.testsktl.classwork13.Classwork13Activity;
 import com.example.user_pc.testsktl.classwork2.Classwork2Activity;
 import com.example.user_pc.testsktl.classwork3.Classwork3Activity;
 import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
@@ -277,6 +278,23 @@ public class MainActivity extends Activity {
                 Classwork12Activity.show(MainActivity.this);
             }
         });
+
+        Button classwork13Button = (Button) findViewById(R.id.classwork13Button);
+        classwork13Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Classwork13Activity.show(MainActivity.this);
+            }
+        });
+
+//        Button classWork13Button = (Button) findViewById(R.id.classwork13Button);
+//        classWork13Button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, Classwork13Activity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 

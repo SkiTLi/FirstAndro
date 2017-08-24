@@ -21,11 +21,9 @@ public class ProfileAdapter extends BaseAdapter<ProfileModel, ProfileItemViewMod
 //    }
 
     @Override
-    public BaseItemViewHolder<ProfileModel, ProfileItemViewModel, ?>
-    onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseItemViewHolder<ProfileModel, ProfileItemViewModel, ?> onCreateViewHolder(ViewGroup parent, int viewType) {
         ProfileItemViewModel itemViewModel = new ProfileItemViewModel();
 //        return new ProfileItemViewHolder.create(LayoutInflater.from(context),
-        return ProfileItemViewHolder.create(LayoutInflater.from(parent.getContext()),
-                parent, itemViewModel);
+        return ProfileItemViewHolder.create(LayoutInflater.from(parent.getContext()), parent, itemViewModel);
     }
 }
