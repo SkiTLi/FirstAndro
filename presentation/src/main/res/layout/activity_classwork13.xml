@@ -27,7 +27,7 @@
 
 <!--можно напрямую указать ссылкой на фрагмент:-->
     <!--<fragment-->
-        <!--android:name="com.example.user_pc.testsktl.classwork13.Classwork13Fragment"-->
+        <!--android:name="com.example.user_pc.testsktl.classwork13.Classwork14Fragment"-->
         <!--android:id="@+id/container"-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->

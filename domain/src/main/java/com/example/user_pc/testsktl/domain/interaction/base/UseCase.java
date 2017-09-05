@@ -13,25 +13,8 @@ import io.reactivex.schedulers.Schedulers;
 //единица логики
 //должен знать входной и исходящий параметры (и их типы)
 public abstract class UseCase<InParam, OutParam> {
-
-    private Disposable disposable;
-
-    //    protected abstract OutParam buildUseCase();
-    protected abstract Observable<OutParam> buildUseCase(InParam param);
-
-
-    //    public OutParam execute(InParam param) {//сделали voidom
-    public void execute(InParam param, DisposableObserver<OutParam> disposableObserver) {
-        disposable = buildUseCase(param)//билдюзкейс будет только сформирован,но не запущен (для запуска нужно подписаться на него)
-                .observeOn(AndroidSchedulers.mainThread())//здесь будет обработан ответ(конкретно здесь то что в UI-потоке)
-                .subscribeOn(Schedulers.newThread())//здесь будет выыполнен ответ (выполнение в другом потоке)
-                .subscribeWith(disposableObserver);//а вот здесь идет подписка (естественно и выполнятся начнет)
+    protected abstract OutParam buildUseCase();
+    public OutParam execute(InParam param) {
+        return buildUseCase();
     }
-
-    public void dispose() { //делаем отписку
-        if (!disposable.isDisposed()) {
-            disposable.dispose();
-        }
-    }
-
 }

@@ -16,31 +16,31 @@ abstract public class BaseActivity extends Activity  {
 
 
 
-    protected BaseViewModel viewModel; //инициилизируется в классе-аследнике
+    protected BaseViewModel viewModelInBaseActivity; //инициилизируется в классе-аследнике
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel.init();
+//        viewModelInBaseActivity.init();
     }
 
 
     @Override
     protected void onResume() {
         super.onResume();
-        viewModel.resume();
+        viewModelInBaseActivity.resume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        viewModel.pause();
+        viewModelInBaseActivity.pause();
     }
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        viewModel.release();
+        viewModelInBaseActivity.release();
     }
 }

@@ -5,6 +5,7 @@ import com.example.user_pc.testsktl.data.net.RestService;
 import com.example.user_pc.testsktl.domain.entity.ProfileModel;
 import com.example.user_pc.testsktl.domain.entity.ProfileId;
 import com.example.user_pc.testsktl.domain.interaction.base.UseCase;
+import com.example.user_pc.testsktl.domain.interaction.base.UseCaseNew;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ import io.reactivex.functions.Function;
  */
 
 //public class ProfileUseCase extends UseCase<Void,ProfileModel> {//вообще здесь должно быть потом не void
-public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
+public class ProfileUseCase extends UseCaseNew<ProfileId, ProfileModel> {
 
 
 

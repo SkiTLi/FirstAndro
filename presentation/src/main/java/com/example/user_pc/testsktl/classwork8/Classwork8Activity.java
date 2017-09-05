@@ -9,8 +9,6 @@ import android.support.annotation.Nullable;
 
 import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.base.*;
-import com.example.user_pc.testsktl.base.BaseViewModel;
-import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
 import com.example.user_pc.testsktl.databinding.ActivityClasswork8Binding;
 
 /**
@@ -33,7 +31,7 @@ public class Classwork8Activity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         Classwork8ViewModel viewModel = new Classwork8ViewModel(this);// дописали this и переписалитроху класворк8вьюмодел
-        this.viewModel = viewModel;
+        this.viewModelInBaseActivity = viewModel;
 
         ActivityClasswork8Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_classwork8);
 

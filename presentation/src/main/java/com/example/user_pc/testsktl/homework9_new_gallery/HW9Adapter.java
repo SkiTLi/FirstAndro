@@ -1,17 +1,15 @@
 package com.example.user_pc.testsktl.homework9_new_gallery;
 
+import android.databinding.BindingAdapter;
+import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.user_pc.testsktl.R;
-
-import java.util.ArrayList;
+import com.example.user_pc.testsktl.databinding.PhotoRecycleViewBinding;
 
 
 /**
@@ -19,89 +17,46 @@ import java.util.ArrayList;
  */
 
 
-public class HW9Adapter extends RecyclerView.Adapter<HW9Adapter.Holder> {
-    private ArrayList<String> items;
-    private ArrayList<String> images;
+public class HW9Adapter extends RecyclerView.Adapter<HW9Adapter.MyItemHolder> {
 
-    public void setListener(OnItemClickListener listener) {
-        this.listener = listener;
-    }
+    private HW9ItemViewModel[] items;
 
-    private OnItemClickListener listener;
-
-    public HW9Adapter(ArrayList<String> items, ArrayList<String> images) {
+    HW9Adapter(HW9ItemViewModel[] items) {
         this.items = items;
-        this.images = images;
     }
 
-    public static class Holder extends RecyclerView.ViewHolder {
+    @Override
+    public MyItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        PhotoRecycleViewBinding binding = PhotoRecycleViewBinding
+                .inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        return new MyItemHolder(binding.getRoot());
+    }
 
-        ImageView imageView3;
-        TextView textView;
+    @Override
+    public void onBindViewHolder(MyItemHolder holder, int position) {
+        holder.binding.setItemModel(items[position]);
+    }
 
-        public Holder(View itemView2) {
-            super(itemView2);
-            imageView3 = (ImageView) itemView2.findViewById(R.id.gallery_imageView);
-            textView = (TextView) itemView2.findViewById(R.id.gallery_textView);
+    @Override
+    public int getItemCount() {
+        return items.length;
+    }
+
+
+    class MyItemHolder extends RecyclerView.ViewHolder {
+
+        PhotoRecycleViewBinding binding;
+
+        MyItemHolder(View itemView) {
+            super(itemView);
+            binding = DataBindingUtil.bind(itemView);
         }
     }
 
-    //    будем создавать похожий элемент
-    @Override
-    public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
-        //создаем модель нашего вью
-        View root = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_recycle_view, parent, false);
-
-        Log.d("AAA", "onCreateViewHolder");
-        return new Holder(root);
+    @BindingAdapter({"bind:item_image"})
+    public static void loadImg(ImageView view, String url) {
+        Glide.with(view.getContext())
+                .load(url)
+                .into(view);
     }
-
-    //будем заполнять данными этот элемент
-    //    для каждой строчки
-    @Override
-    public void onBindViewHolder(Holder holder, int position) {
-        Log.d("AAA", "onBindViewHolder position()=" + position);
-        final String item = items.get(position);
-//        Uri image = images.get(position);
-        String image = images.get(position);
-
-        //holderimage view - дома
-        holder.textView.setText(item);
-
-        Log.d("AAA", holder.imageView3.getContext().toString());
-        Log.d("AAA", holder.textView.getContext().toString());
-
-        Glide.with(holder.imageView3.getContext())
-                .load(image)
-                .placeholder(R.drawable.ic_cloud_download_black_24dp)//отбражаетя во время загрузки
-                .error(R.drawable.ic_error_black_24dp)//заглушка в случае ошибки
-                // .resize(55, 88)//подрезать
-                .into(holder.imageView3);
-
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (listener != null) {
-                    listener.onItemClick(item);
-                }
-            }
-        });
-    }
-
-    //количество элементов
-    @Override
-    public int getItemCount() {
-//        вот так это делается)))
-        return items == null ? 0 : items.size();
-    }
-
-
-    //    для того чтобы повесить клик на вашресайклвью
-    interface OnItemClickListener {
-        public void onItemClick(String item);
-    }
-
-
 }

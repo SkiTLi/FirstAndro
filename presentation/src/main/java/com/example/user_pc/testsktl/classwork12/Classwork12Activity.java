@@ -6,22 +6,11 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
 import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.base.BaseActivity;
 
 import com.example.user_pc.testsktl.databinding.ActivityClasswork12Binding;
-
-
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.observers.DisposableObserver;
-import io.reactivex.subjects.BehaviorSubject;
-import io.reactivex.subjects.PublishSubject;
-import io.reactivex.subjects.ReplaySubject;
 
 /**
  * Created by USER-PC on 26.07.2017.
@@ -43,7 +32,7 @@ public class Classwork12Activity extends BaseActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
 
         Classwork12ViewModel viewModel = new Classwork12ViewModel(this);
-        this.viewModel = viewModel;
+        this.viewModelInBaseActivity = viewModel;
 
         ActivityClasswork12Binding binding = DataBindingUtil
                 .setContentView(this, R.layout.activity_classwork12);

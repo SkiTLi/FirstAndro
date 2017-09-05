@@ -7,14 +7,14 @@ package com.example.user_pc.testsktl.domain.entity;
 public class PhotoId implements DomainModel  {
 
 
-    private String id;
+    private int id;
 
-    public String getId() {
-        return id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public int getId() {
+        return id;
     }
 
 

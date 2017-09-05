@@ -9,6 +9,8 @@ package com.example.user_pc.testsktl.base;
 
 public interface BaseViewModel {
 
+
+
     public void init();
 
     public void release();

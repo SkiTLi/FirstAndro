@@ -6,7 +6,6 @@ package com.example.user_pc.testsktl.domain.entity;
 
 public class ProfileId {
 
-
     private String id;
 
     public String getId() {

@@ -49,7 +49,7 @@ public class Classwork9Activity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         Classwork9ViewModel viewModel = new Classwork9ViewModel();// дописали this и переписалитроху класворк8вьюмодел
-        this.viewModel = viewModel;
+        this.viewModelInBaseActivity = viewModel;
 
         ActivityClasswork9Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_classwork9);
 

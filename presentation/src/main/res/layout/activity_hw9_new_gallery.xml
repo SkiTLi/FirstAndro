@@ -1,58 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
-
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:bind="http://schemas.android.com/apk/res-auto"-->
-    <!--здесь будем описывать переменные-->
-    <!--указываем классы к которым даем доступ-->
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto">
 
     <data>
 
-        <!--<import type="android.view.View" />-->
-
-
-        <!--<variable-->
-            <!--name="user"-->
-            <!--type="com.example.user_pc.testsktl.homework9_new_gallery.HW9Activity" />-->
+        <variable
+            name="model"
+            type="com.example.user_pc.testsktl.homework9_new_gallery.HW9ViewModel" />
     </data>
 
     <LinearLayout
-
-
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="5dp"
-        android:background="#d9d7a862"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--доп утилитка-->
-        <!--xmlns:tools=“http://schemas.android.com/tools”-->
-
-
-        <ImageView
-            android:id="@+id/gallery_imageView"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/image" />
-
-        <TextView
-            android:id="@+id/gallery_textView"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/avatar_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="*+*" />
-
-
-
+            android:layout_gravity="center"
+            myapp:adapter="@{model.items}"/>
     </LinearLayout>
-
 </layout>
+    <!--<data>-->
+
+        <!--<variable-->
+            <!--name="viewModel"-->
+            <!--type="com.example.user_pc.testsktl.homework9_new_gallery.HW9ViewModel" />-->
+    <!--</data>-->

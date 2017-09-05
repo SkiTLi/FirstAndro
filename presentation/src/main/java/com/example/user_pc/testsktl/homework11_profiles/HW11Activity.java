@@ -1,11 +1,9 @@
 package com.example.user_pc.testsktl.homework11_profiles;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.support.annotation.Nullable;
 
-import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.base.BaseActivity;
 
 
@@ -25,11 +23,11 @@ public class HW11Activity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         HW11ViewModel viewModel = new HW11ViewModel();// дописали this и переписалитроху класворк8вьюмодел
-        this.viewModel = viewModel;
+        this.viewModelInBaseActivity = viewModel;
 
 //         binding = DataBindingUtil.setContentView(this, R.layout.recycle_view_hw11_name);
 //
-//        binding.setViewModel(viewModel);
+//        binding.setViewModel(viewModelInBaseActivity);
         super.onCreate(savedInstanceState);
 
 

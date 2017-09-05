@@ -29,16 +29,8 @@ public class Classwork13Activity extends FragmentActivity {
         Intent intent = new Intent(activity, Classwork13Activity.class);
         activity.startActivity(intent);
     }
+
     //bundle это то же что и intent только здесь не передается инфа
-
-
-
-
-
-
-
-
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,10 +65,10 @@ public class Classwork13Activity extends FragmentActivity {
                                     Fragment fragment, boolean addToBackStack) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment, fragment.getClass().getName());
-        if(addToBackStack) fragmentTransaction.addToBackStack(null);
+        if (addToBackStack) fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();//выполнить
     }
-        //addToBackStack //позволяет сохранить состояниие, те будет работать кнопка назад
+    //addToBackStack //позволяет сохранить состояниие, те будет работать кнопка назад
 
 }
 

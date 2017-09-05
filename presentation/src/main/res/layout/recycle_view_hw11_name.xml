@@ -41,7 +41,7 @@
             android:visibility="@{viewModel.state != STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
 
 
-        <!--android:onClick="@{()->viewModel.onSuperButtonClick()}" должен работать клик-->
+        <!--android:onClick="@{()->viewModelInBaseActivity.onSuperButtonClick()}" должен работать клик-->
 
     </LinearLayout>
 </layout>

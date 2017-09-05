@@ -8,6 +8,14 @@ public class PhotoModel implements DomainModel {
     private String url;
     private String name;
 
+    public PhotoModel(String url, String name) {
+        this.url = url;
+        this.name = name;
+    }
+
+    public PhotoModel() {
+
+    }
 
     public String getUrl() {
         return url;

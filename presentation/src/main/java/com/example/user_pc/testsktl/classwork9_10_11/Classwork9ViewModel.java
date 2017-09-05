@@ -21,7 +21,6 @@ import io.reactivex.observers.DisposableObserver;
 //плюс тема ПОТОКИ
 public class Classwork9ViewModel implements BaseViewModel {
 
-
     public enum STATE {PROGRESS, DATA}
 
     public ObservableField<String> name = new ObservableField<>("паша");

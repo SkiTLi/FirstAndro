@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.classwork12.Classwork12Activity;
 import com.example.user_pc.testsktl.classwork13.Classwork13Activity;
+import com.example.user_pc.testsktl.classwork14.Classwork14Activity;
 import com.example.user_pc.testsktl.classwork2.Classwork2Activity;
 import com.example.user_pc.testsktl.classwork3.Classwork3Activity;
 import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
@@ -291,10 +292,18 @@ public class MainActivity extends Activity {
 //        classWork13Button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, Classwork13Activity.class);
+//                Intent intent = new Intent(MainActivity.this, Classwork14Activity.class);
 //                startActivity(intent);
 //            }
 //        });
+
+        Button classwork14Button = (Button) findViewById(R.id.classwork14Button);
+        classwork14Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Classwork14Activity.show(MainActivity.this);
+            }
+        });
 
     }
 
