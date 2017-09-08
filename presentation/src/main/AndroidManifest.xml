@@ -75,6 +75,11 @@
         <activity android:name=".classwork12.Classwork12Activity" />
         <activity android:name=".classwork13.Classwork13Activity" />
         <activity android:name=".classwork14.Classwork14Activity" />
+        <activity android:name=".classwork15_16.Classwork16Activity" />
+        <activity android:name=".homework14_spinner.HW14Activity" />
+
+
+
     </application>
 
 </manifest>

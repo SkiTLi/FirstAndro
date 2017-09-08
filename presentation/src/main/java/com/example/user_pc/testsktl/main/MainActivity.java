@@ -22,6 +22,7 @@ import com.example.user_pc.testsktl.classwork9_10_11.Classwork9Activity;
 import com.example.user_pc.testsktl.homework1.Dz1Activity;
 import com.example.user_pc.testsktl.homework10_timer.HW10Activity;
 import com.example.user_pc.testsktl.homework11_profiles.HW11Activity;
+import com.example.user_pc.testsktl.homework14_spinner.HW14Activity;
 import com.example.user_pc.testsktl.homework2.HW2Activity;
 import com.example.user_pc.testsktl.homework3_glide.HW3Activity;
 import com.example.user_pc.testsktl.homework4.HW4Activity;
@@ -302,6 +303,16 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Classwork14Activity.show(MainActivity.this);
+            }
+        });
+
+
+        Button homeWork14Button = (Button) findViewById(R.id.homework14Button);
+        homeWork14Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HW14Activity.class);
+                startActivity(intent);
             }
         });
 

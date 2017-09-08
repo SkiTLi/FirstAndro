@@ -1,4 +1,4 @@
-package com.example.user_pc.testsktl.classwork15;
+package com.example.user_pc.testsktl.data.dbentity;
 
 /**
  * Created by USER-PC on 04.09.2017.
@@ -6,15 +6,15 @@ package com.example.user_pc.testsktl.classwork15;
 
 public class Country {
 
-    private String id;
+    private int id;
     private String name;
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
