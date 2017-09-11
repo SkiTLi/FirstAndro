@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.databinding.ObservableField;
 import android.util.Log;
 
-
 import com.example.user_pc.testsktl.base.BaseViewModel;
 import com.example.user_pc.testsktl.domain.entity.ProfileModel;
 import com.example.user_pc.testsktl.domain.interaction.GetProfileListUseCase;
@@ -22,6 +21,7 @@ import io.reactivex.observers.DisposableObserver;
 //здесь нужно с github
 public class Classwork12ViewModel implements BaseViewModel {
     public enum STATE {PROGRESS, DATA}
+
     public ObservableField<STATE> state = new ObservableField<>(STATE.PROGRESS);
     public Activity activity;
 
@@ -34,12 +34,13 @@ public class Classwork12ViewModel implements BaseViewModel {
     public ProfileAdapter adapter = new ProfileAdapter();
 
     @Override
-    public void init() {}
+    public void init() {
+    }
 
     @Override
     public void resume() {
 
-        getProfileListUseCase.execute(null, new DisposableObserver<List<ProfileModel>>(){
+        getProfileListUseCase.execute(null, new DisposableObserver<List<ProfileModel>>() {
 
             @Override
             public void onNext(List<ProfileModel> profileModels) {

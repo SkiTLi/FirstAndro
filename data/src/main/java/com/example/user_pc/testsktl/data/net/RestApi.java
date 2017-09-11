@@ -19,7 +19,7 @@ public interface RestApi {
     @GET("data/profile")
     Observable<List<Profile>> getProfiles();
 
+    //в backendless должна появиться новая строка
     @POST("data/profile")
-    Observable<Void> saveProfile(@Body Profile profile);//d backendless должна появиться новая строка
-
+    Observable<Void> saveProfile(@Body Profile profile);
 }

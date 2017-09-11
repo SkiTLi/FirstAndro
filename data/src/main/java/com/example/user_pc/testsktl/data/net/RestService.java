@@ -36,8 +36,6 @@ public class RestService {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
-
-
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 //                .addInterceptor(logging)//не могу создать
                 .readTimeout(10, TimeUnit.SECONDS)//если в течении 10 сеунд ответа нет то запрос считать неправильным
@@ -48,11 +46,10 @@ public class RestService {
         Gson gson = new GsonBuilder().create();
         //создаем ретрофит
         Retrofit retrofit = new Retrofit.Builder()
-
                 .baseUrl("https://api.backendless.com/70E26EEB-3ACD-601D-FF12-541F239F8800/FDBEBFDC-2C3B-E045-FF00-D718E4134700/")//повторяющаяс часть ссылки
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//говорит что делать через rx
-                .addConverterFactory(GsonConverterFactory.create())//как конвертироватьданные
-                .client(okHttpClient)//устанавливает клиент через который онбудет ломиться (через okhttp)
+                .addConverterFactory(GsonConverterFactory.create())//как конвертировать данные
+                .client(okHttpClient)//устанавливает клиент через который он будет ломиться (через okhttp)
                 .build();
 
         restApi = retrofit.create(RestApi.class); //через это будем дергать все данные

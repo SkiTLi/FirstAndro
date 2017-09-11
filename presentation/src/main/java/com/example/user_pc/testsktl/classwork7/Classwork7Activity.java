@@ -11,7 +11,6 @@ import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.databinding.ActivityClasswork7Binding;
 
 
-
 /**
  * Created by USER-PC on 26.07.2017.
  */
@@ -26,9 +25,11 @@ public class Classwork7Activity extends Activity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_classwork7);//нужно удалить
 
+        //***биндинг-это геттер кторый заменяет все переменные в xml
         ActivityClasswork7Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_classwork7);
-        binding.setActivity(this);//передает myText строчку передает в xml//биндинг-это геттер кторый заменяет все переменные в xml
+        binding.setActivityClasswork7InXml(this);//передает myText строчку передает в xml
         binding.superTextView.setText("или вот сразу забить текст");
+
     }
 
 

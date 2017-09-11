@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'//подключает плагин
+apply plugin: 'realm-android' //подключили временно здесь а не в датат для realm
 
 android {
     compileSdkVersion 25//под которой будет компиляция

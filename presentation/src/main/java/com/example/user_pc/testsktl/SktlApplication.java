@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.squareup.leakcanary.LeakCanary;
 
+import io.realm.Realm;
+
 
 /**
  * Created by USER-PC on 31.07.2017.
@@ -23,6 +25,8 @@ public class SktlApplication extends Application {
         }
         LeakCanary.install(this);
         // Normal app init code...
+
+        Realm.init(this);//инициализируем реалэм
  
     }
 

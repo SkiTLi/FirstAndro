@@ -11,6 +11,8 @@ import com.example.user_pc.testsktl.R;
 import com.example.user_pc.testsktl.classwork12.Classwork12Activity;
 import com.example.user_pc.testsktl.classwork13.Classwork13Activity;
 import com.example.user_pc.testsktl.classwork14.Classwork14Activity;
+import com.example.user_pc.testsktl.classwork15.Classwork15Activity;
+import com.example.user_pc.testsktl.classwork16.Classwork16Activity;
 import com.example.user_pc.testsktl.classwork2.Classwork2Activity;
 import com.example.user_pc.testsktl.classwork3.Classwork3Activity;
 import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
@@ -313,6 +315,23 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HW14Activity.class);
                 startActivity(intent);
+            }
+        });
+
+
+        Button classwork15Button = (Button) findViewById(R.id.classwork15Button);
+        classwork15Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Classwork15Activity.show(MainActivity.this);
+            }
+        });
+
+        Button classwork16Button = (Button) findViewById(R.id.classwork16Button);
+        classwork16Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Classwork16Activity.show(MainActivity.this);
             }
         });
 

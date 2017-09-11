@@ -9,7 +9,8 @@ import android.view.View;
  */
 public abstract class BaseItemViewHolder<Model,
         ViewModel extends BaseItemViewModel<Model>,
-        DataBinding extends ViewDataBinding> extends RecyclerView.ViewHolder {
+        DataBinding extends ViewDataBinding>
+        extends RecyclerView.ViewHolder {
 
 //public abstract class BaseItemViewHolder<Model,//имеется ввиду то что мы хотим распечатать(лист профайл модель)
 //                ViewModel//обсервблфилд

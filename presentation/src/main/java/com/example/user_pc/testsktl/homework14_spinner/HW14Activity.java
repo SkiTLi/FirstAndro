@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -15,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.user_pc.testsktl.R;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -135,18 +137,25 @@ public class HW14Activity extends Activity {
     public String loadJSONFromAsset() {
         String json = null;
         try {
+
             InputStream is = HW14Activity.this.getAssets().open("countries.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
             json = new String(buffer, "UTF-8");
+
+
         } catch (IOException ex) {
             ex.printStackTrace();
             return null;
         }
+        //от yariko:
+        //  Gson gson = new Gson();
+        //  AssetCountry[] countries = gson.fromJson(jsonString, AssetCountry[].class);
+        //  return new ArrayList<AssetCountry>(Arrays.asList(countries));
+
         return json;
     }
-
 
 }

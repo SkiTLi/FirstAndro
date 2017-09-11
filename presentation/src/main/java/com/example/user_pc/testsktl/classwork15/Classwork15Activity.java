@@ -1,4 +1,4 @@
-package com.example.user_pc.testsktl.classwork15_16;
+package com.example.user_pc.testsktl.classwork15;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,11 +13,11 @@ import com.example.user_pc.testsktl.R;
  */
 
 
-public class Classwork16Activity extends FragmentActivity {
+public class Classwork15Activity extends FragmentActivity {
 
 
     public static void show(Activity activity) {
-        Intent intent = new Intent(activity, Classwork16Activity.class);
+        Intent intent = new Intent(activity, Classwork15Activity.class);
         activity.startActivity(intent);
     }
 

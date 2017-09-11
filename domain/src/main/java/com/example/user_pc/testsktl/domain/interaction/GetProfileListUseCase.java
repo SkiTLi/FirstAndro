@@ -4,7 +4,6 @@ import com.example.user_pc.testsktl.data.entity.Profile;
 import com.example.user_pc.testsktl.data.net.RestService;
 import com.example.user_pc.testsktl.domain.entity.ProfileId;
 import com.example.user_pc.testsktl.domain.entity.ProfileModel;
-import com.example.user_pc.testsktl.domain.interaction.base.UseCase;
 import com.example.user_pc.testsktl.domain.interaction.base.UseCaseNew;
 
 import java.util.ArrayList;
@@ -18,17 +17,20 @@ public class GetProfileListUseCase extends UseCaseNew<ProfileId, List<ProfileMod
 
     @Override
     protected Observable<List<ProfileModel>> buildUseCase(ProfileId param) {
-        return RestService.getInstance().getProfile().map(new Function<List<Profile>, List<ProfileModel>>() {
+        return RestService
+                .getInstance()
+                .getProfile()
+                .map(new Function<List<Profile>, List<ProfileModel>>() {
                     @Override
-                    public List<ProfileModel> apply(@NonNull List<Profile> profiles) throws Exception {
+                    public List<ProfileModel> apply(@NonNull List<Profile> profiles)
+                            throws Exception {
                         List<ProfileModel> list = new ArrayList<>();
-                        for(Profile profile: profiles) {
+                        for (Profile profile : profiles) {
                             list.add(convert(profile));
                         }
                         return list;
                     }
                 });
-
     }
 
     private ProfileModel convert(Profile dataModel) {

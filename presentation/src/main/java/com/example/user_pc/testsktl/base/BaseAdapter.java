@@ -1,6 +1,7 @@
 package com.example.user_pc.testsktl.base;
 
 import android.support.v7.widget.RecyclerView;
+
 import com.example.user_pc.testsktl.data.entity.Profile;
 
 import java.util.ArrayList;
@@ -10,9 +11,7 @@ import java.util.List;
  * Created by USER-PC on 18.08.2017.
  */
 
-public abstract class BaseAdapter
-        <Model,
-                ViewModel extends BaseItemViewModel<Model>>
+public abstract class BaseAdapter<Model, ViewModel extends BaseItemViewModel<Model>>
         extends RecyclerView.Adapter<BaseItemViewHolder<Model, ViewModel, ?>> {
 
     private List<Model> items = new ArrayList<>();

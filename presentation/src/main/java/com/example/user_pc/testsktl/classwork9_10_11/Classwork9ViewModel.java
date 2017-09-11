@@ -44,8 +44,6 @@ public class Classwork9ViewModel implements BaseViewModel {
 
     @Override
     public void resume() {
-
-
         ProfileModel profileModel = new ProfileModel();
         profileModel.setName("Стив");
         profileModel.setSurname("Роджерс");

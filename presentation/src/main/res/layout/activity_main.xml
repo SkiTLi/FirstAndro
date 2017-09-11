@@ -223,18 +223,26 @@
                 android:text="cw14" />
 
             <Button
-                android:id="@+id/classwork15Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="cw15,16" />
-
-            <Button
                 android:id="@+id/homework14Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:text="hw14 (spinner)" />
+
+            <Button
+                android:id="@+id/classwork15Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw15" />
+
+
+            <Button
+                android:id="@+id/classwork16Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw16" />
 
         </LinearLayout>
 
