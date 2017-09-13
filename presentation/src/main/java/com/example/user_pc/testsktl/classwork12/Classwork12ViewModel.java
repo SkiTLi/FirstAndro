@@ -10,6 +10,8 @@ import com.example.user_pc.testsktl.domain.interaction.GetProfileListUseCase;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.observers.DisposableObserver;
 
 
@@ -29,7 +31,12 @@ public class Classwork12ViewModel implements BaseViewModel {
         this.activity = activity;
     }
 
+
+    //правильная строка
     private GetProfileListUseCase getProfileListUseCase = new GetProfileListUseCase();
+
+//    @Inject //это я пвтался сделать из классворка 17 с помощью dagger
+//    private GetProfileListUseCase getProfileListUseCase;
 
     public ProfileAdapter adapter = new ProfileAdapter();
 

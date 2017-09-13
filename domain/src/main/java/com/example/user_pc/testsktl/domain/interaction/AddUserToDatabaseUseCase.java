@@ -1,11 +1,10 @@
 package com.example.user_pc.testsktl.domain.interaction;
 
 
-import com.example.user_pc.testsktl.data.database.DatabaseManeger;
+import com.example.user_pc.testsktl.data.database.DatabaseManager;
 import com.example.user_pc.testsktl.domain.entity.AddUser;
 import com.example.user_pc.testsktl.domain.entity.Country;
 import com.example.user_pc.testsktl.domain.entity.User;
-import com.example.user_pc.testsktl.domain.interaction.base.UseCase;
 import com.example.user_pc.testsktl.domain.interaction.base.UseCaseNew;
 
 import io.reactivex.Observable;
@@ -26,7 +25,7 @@ public class AddUserToDatabaseUseCase extends UseCaseNew<AddUser,Void> {
             @Override
             public void subscribe(@NonNull ObservableEmitter<Void> e) throws Exception {
 
-                DatabaseManeger databaseManager = new DatabaseManeger(param.getContext());
+                DatabaseManager databaseManager = new DatabaseManager(param.getContext());
                 databaseManager.open(true);
                 databaseManager.insertUser(convert(param.getUser()));//записываем
                 databaseManager.close();

@@ -247,6 +247,31 @@
         </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#77777777"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/classwork17Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw17" />
+
+            <Button
+                android:id="@+id/classwork18Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="cw18" />
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </ScrollView>

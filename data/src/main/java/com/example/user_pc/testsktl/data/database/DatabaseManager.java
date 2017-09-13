@@ -15,14 +15,14 @@ import java.util.List;
  * Created by USER-PC on 06.09.2017.
  */
 //будет работать непосредственно с dbhelper и здесь уже будет основная работа
-public class DatabaseManeger {
+public class DatabaseManager {
     Context context;
     private DBHelper dbHelper;
     private SQLiteDatabase database;
 
 //    sqlite потоко не безопасно тк выполняется в ui потоке
 
-    public DatabaseManeger(Context context) {
+    public DatabaseManager(Context context) {
         this.context = context;
         dbHelper = new DBHelper(context);
     }

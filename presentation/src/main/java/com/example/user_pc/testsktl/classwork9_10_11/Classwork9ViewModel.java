@@ -5,10 +5,13 @@ import android.databinding.ObservableInt;
 import android.util.Log;
 
 import com.example.user_pc.testsktl.base.BaseViewModel;
+import com.example.user_pc.testsktl.classwork17.UseCase1;
 import com.example.user_pc.testsktl.domain.entity.ProfileModel;
 import com.example.user_pc.testsktl.domain.entity.ProfileId;
 import com.example.user_pc.testsktl.domain.interaction.ProfileUseCase;
 import com.example.user_pc.testsktl.domain.interaction.SaveProfileUseCase;
+
+import javax.inject.Inject;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.observers.DisposableObserver;
@@ -30,7 +33,11 @@ public class Classwork9ViewModel implements BaseViewModel {
 
 
     private ProfileUseCase useCase = new ProfileUseCase();
-    private SaveProfileUseCase saveProfileUseCase = new SaveProfileUseCase();
+    //    это правильная строчка:
+        private SaveProfileUseCase saveProfileUseCase = new SaveProfileUseCase();
+//    @Inject //а это уже идет как накрутка в classwork17
+//            SaveProfileUseCase saveProfileUseCase;
+
 
     @Override
     public void init() {
@@ -60,13 +67,12 @@ public class Classwork9ViewModel implements BaseViewModel {
             }
 
 
-//            в онкомплите может возвращать несколько значений
+            //            в онкомплите может возвращать несколько значений
             @Override
             public void onComplete() {
 
             }
         });
-
 
 
         ProfileId profileId = new ProfileId();

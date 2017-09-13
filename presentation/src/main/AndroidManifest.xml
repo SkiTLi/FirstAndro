@@ -78,8 +78,8 @@
         <activity android:name=".classwork15.Classwork15Activity" />
         <activity android:name=".homework14_spinner.HW14Activity" />
         <activity android:name=".classwork16.Classwork16Activity" />
-
-
+        <activity android:name=".classwork17.Classwork17Activity" />
+        <activity android:name=".classwork18.Classwork18Activity" />
 
 
     </application>

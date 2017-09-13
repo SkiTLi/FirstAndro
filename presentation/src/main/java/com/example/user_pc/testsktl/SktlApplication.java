@@ -2,6 +2,9 @@ package com.example.user_pc.testsktl;
 
 import android.app.Application;
 
+import com.example.user_pc.testsktl.di.AppComponent;
+import com.example.user_pc.testsktl.di.AppModule;
+import com.example.user_pc.testsktl.di.DaggerAppComponent;
 import com.squareup.leakcanary.LeakCanary;
 
 import io.realm.Realm;
@@ -13,10 +16,13 @@ import io.realm.Realm;
 
 public class SktlApplication extends Application {
 
+public static AppComponent appComponent;
+
 
     //здесь все инициализируется единожды при старте приложения
     //глобальный контеккст
-    @Override public void onCreate() {
+    @Override
+    public void onCreate() {
         super.onCreate();
         if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
@@ -26,8 +32,17 @@ public class SktlApplication extends Application {
         LeakCanary.install(this);
         // Normal app init code...
 
-        Realm.init(this);//инициализируем реалэм
- 
+
+        //инициализируем реалэм
+        Realm.init(this);
+
+
+        //nr это здесь то  и находится все это будет в слое presentation
+        appComponent = DaggerAppComponent.builder()
+                .appModule(new AppModule())
+                .build();
+
     }
+
 
 }

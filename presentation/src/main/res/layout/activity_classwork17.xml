@@ -2,22 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f156c7"
+    android:background="#50cf70"
     android:orientation="vertical">
 
     <EditText
         android:layout_width="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editText1"
         android:layout_height="wrap_content"
-        android:hint="Info"/>
+        android:hint="тут что-то написано"/>
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="save" />
+        android:text="что-то" />
 
 </LinearLayout>
-
-

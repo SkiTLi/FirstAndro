@@ -41,6 +41,8 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
 //позволяте увидеть логи
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    //для даггера
+    compile 'javax.inject:javax.inject:1'
 
 
 }
