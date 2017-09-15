@@ -18,7 +18,7 @@ public class UI {
 
     public UI() {
         //( эту строчку нужно писать везде где хотим использовать  @Inject UseCase1 useCase1
-        // , но на слое presentation;
+        // , но на слое presentation;//в домейне и дата эту строчку не используют
         SktlApplication.appComponent.inject(this);
         //) эту строчку нужно писать везде где хотим использовать  @Inject UseCase1 useCase1;
     }
