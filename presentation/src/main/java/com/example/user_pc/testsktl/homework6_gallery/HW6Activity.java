@@ -91,7 +91,7 @@ public class HW6Activity extends Activity {
         recyclerView.setLayoutManager(layoutManager);
 
         HW6Adapter adapter = new HW6Adapter(stringArrayList, imageStringArrayList);
-
+//эта часть походу не используется
         adapter.setListener(new HW6Adapter.OnItemClickListener() {
             @Override
             public void onItemClick(String item) {

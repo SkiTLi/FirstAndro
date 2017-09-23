@@ -24,12 +24,14 @@ public class HW6Adapter extends RecyclerView.Adapter<HW6Adapter.Holder> {
     private ArrayList<String> items;
     //    private ArrayList<Uri> images;
     private ArrayList<String> images;
+    //эта часть походу не используется
+    private OnItemClickListener listener;
 
+    //эта часть походу не используется
     public void setListener(OnItemClickListener listener) {
         this.listener = listener;
     }
 
-    private OnItemClickListener listener;
 
     public HW6Adapter(ArrayList<String> items, ArrayList<String> images) {
         this.items = items;
@@ -81,7 +83,7 @@ public class HW6Adapter extends RecyclerView.Adapter<HW6Adapter.Holder> {
                 // .resize(55, 88)//подрезать
                 .into(holder.imageView3);
 
-
+//эта часть походу не используется
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,6 +1,8 @@
 package com.example.user_pc.testsktl.data.net;
 
+import com.example.user_pc.testsktl.data.entity.AccessTokenData;
 import com.example.user_pc.testsktl.data.entity.Profile;
+import com.example.user_pc.testsktl.data.entity.RegisterData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -59,6 +61,15 @@ public class RestService {
     public Observable<List<Profile>> getProfile() {
         return restApi.getProfiles();
     }
+
+    public Observable<AccessTokenData> register(RegisterData registerData) {
+
+        //заменить на реальный вызов
+        AccessTokenData accessTokenData = new AccessTokenData();
+        accessTokenData.setAccessToken("dskjfhdskjhfalkjfhdl");
+        return Observable.just(accessTokenData);
+    }
+
 
     public Observable<Void> saveProfiles(Profile profile) {
         return restApi.saveProfile(profile);

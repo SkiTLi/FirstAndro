@@ -7,13 +7,18 @@
     <!-- позволяет сделать проверку подключения к интернету -->
     <!-- еще это нужно для ресивера в данном занятии -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- для пользования gps -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- чтение и запись на файл -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- для пользования gps -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
     <!-- для канарейки android:name="com.example.user_pc.testsktl.SktlApplication" -->
     <application
         android:name=".SktlApplication"
@@ -56,21 +61,17 @@
         <service
             android:name=".homework5.SktlServiceOnBCR"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name=".homework5.HW5Activity" />
         <activity android:name=".classwork6.Classwork6Activity" />
-
         <activity android:name=".homework6_gallery.HW6Activity" />
         <activity android:name=".classwork7.Classwork7Activity" />
-
         <activity android:name=".homework7_mvvm.HW7Activity" />
         <activity android:name=".classwork8.Classwork8Activity" />
         <activity android:name=".classwork9_10_11.Classwork9Activity" />
-
         <activity android:name=".homework9_new_gallery.HW9Activity" />
         <activity android:name=".homework10_timer.HW10Activity" />
-
         <activity android:name=".homework11_profiles.HW11Activity" />
         <activity android:name=".classwork12.Classwork12Activity" />
         <activity android:name=".classwork13.Classwork13Activity" />
@@ -80,8 +81,24 @@
         <activity android:name=".classwork16.Classwork16Activity" />
         <activity android:name=".classwork17.Classwork17Activity" />
         <activity android:name=".classwork18.Classwork18Activity" />
+        <activity android:name=".classwork21.RegisterActivity" />
 
 
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".classwork22.MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

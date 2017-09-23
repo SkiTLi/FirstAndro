@@ -1,6 +1,7 @@
 package com.example.user_pc.testsktl.di;
 
 import com.example.user_pc.testsktl.classwork17.UI;
+import com.example.user_pc.testsktl.classwork21.RegisterPresenter;
 
 import javax.inject.Singleton;
 
@@ -22,5 +23,18 @@ import dagger.Component;
 public interface AppComponent {
 
     //сюда потом можно запиать то что хотим инджектить
+    public void inject(RegisterPresenter presenter);
+
+
     public void inject(UI ui);
 }
+
+
+//@Component(modules = {AppModule.class})
+//@Singleton
+//public interface AppComponent {
+//
+//    public void inject(UI ui);
+//
+//    public void inject(RegisterPresenter presenter);
+//}

@@ -32,17 +32,16 @@ public static AppComponent appComponent;
         LeakCanary.install(this);
         // Normal app init code...
 
-
         //инициализируем реалэм
         Realm.init(this);
 
-
         //nr это здесь то  и находится все это будет в слое presentation
+
         appComponent = DaggerAppComponent.builder()
-                .appModule(new AppModule())
+                .appModule(new AppModule(this))
                 .build();
-
     }
-
-
 }
+
+
+

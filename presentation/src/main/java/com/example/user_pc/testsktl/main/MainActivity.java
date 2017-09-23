@@ -16,6 +16,8 @@ import com.example.user_pc.testsktl.classwork16.Classwork16Activity;
 import com.example.user_pc.testsktl.classwork17.Classwork17Activity;
 import com.example.user_pc.testsktl.classwork18.Classwork18Activity;
 import com.example.user_pc.testsktl.classwork2.Classwork2Activity;
+import com.example.user_pc.testsktl.classwork21.RegisterActivity;
+import com.example.user_pc.testsktl.classwork22.MapsActivity;
 import com.example.user_pc.testsktl.classwork3.Classwork3Activity;
 import com.example.user_pc.testsktl.classwork4.Classwork4Activity;
 import com.example.user_pc.testsktl.classwork5.Classwork5Activity;
@@ -34,6 +36,8 @@ import com.example.user_pc.testsktl.homework5.HW5Activity;
 import com.example.user_pc.testsktl.homework6_gallery.HW6Activity;
 import com.example.user_pc.testsktl.homework7_mvvm.HW7Activity;
 import com.example.user_pc.testsktl.homework9_new_gallery.HW9Activity;
+
+import static com.example.user_pc.testsktl.R.id.registerButton;
 
 /**
  * Created by USER-PC on 26.07.2017.
@@ -350,6 +354,22 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Classwork18Activity.show(MainActivity.this);
+            }
+        });
+
+        Button RegisterButton = (Button) findViewById(R.id.registerButton);
+        RegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RegisterActivity.show(MainActivity.this);
+            }
+        });
+
+        Button classwork22Button = (Button) findViewById(R.id.classwork22Button);
+        classwork22Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MapsActivity.show(MainActivity.this);
             }
         });
 

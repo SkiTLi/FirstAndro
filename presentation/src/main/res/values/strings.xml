@@ -8,6 +8,7 @@
     <string name="classwork2_username">Name</string>  <!--cw2-->
     <string name="classwork2_login">Login</string>  <!--cw2-->
     <string name="link_image">https://goo.gl/oaZVyX</string>  <!--hw3-->
-    <string name="link_image1">https://goo.gl/oaZVyX</string>  <!--hw6-->
+    <string name="link_image1">https://goo.gl/oaZVyX</string>
+    <string name="title_activity_maps">Map</string>  <!--hw6-->
 
 </resources>

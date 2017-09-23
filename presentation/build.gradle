@@ -60,43 +60,46 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //    это для CjntextCompat
-    compile 'com.android.support:appcompat-v7:25.3.1'
     //эти библиотеки для recycleview например имеют обратную совместимость . + лучше не делать
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
     ////это для пикасса
-    compile 'com.squareup.picasso:picasso:2.5.2'
     ////пару мегобайт ,просто дописать библиотеку и будет скачиваться в проект
     ////это для LeakCanary
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
     ////это для glide
     //    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
     //    compile 'com.android.support:support-v4:25.3.1'
     //    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
     ////это для glide (старая версия)
-    compile 'com.github.bumptech.glide:glide:3.8.0'
-    compile 'com.github.bumptech.glide:volley-integration:1.4.0@aar'
-    compile 'com.mcxiaoke.volley:library:1.0.8'
-    annotationProcessor 'com.android.databinding:compiler:2.3.0'
     //можно писать и двойные и одинарные ковочки
     compile project(path: ':domain')
     //rx добавили
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
     //yt нужно делать findViewById (но устарела)
-    compile 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    compile 'com.google.code.gson:gson:2.8.1'
     //для даггера:
+    //для першишн
+
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.github.bumptech.glide:volley-integration:1.4.0@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.8'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.google.dagger:dagger:2.8'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    compile 'com.google.android.gms:play-services-maps:10.2.6'
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    annotationProcessor 'com.android.databinding:compiler:2.3.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.8'
-
-
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
 }
