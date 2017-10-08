@@ -28,7 +28,7 @@ import io.reactivex.Observable;
 
 
 //здесь набор методов которые создают объекты
-@Module //из пакета dugger аннотация
+@Module //из пакета dagger аннотация
 public class AppModule {
 
     private Context context;

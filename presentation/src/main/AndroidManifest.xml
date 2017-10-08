@@ -82,8 +82,6 @@
         <activity android:name=".classwork17.Classwork17Activity" />
         <activity android:name=".classwork18.Classwork18Activity" />
         <activity android:name=".classwork21.RegisterActivity" />
-
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -95,10 +93,15 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
         <activity
             android:name=".classwork22.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+
+
+        <activity android:name=".andys.ClockActivity" />
+
+
+
     </application>
 
 </manifest>

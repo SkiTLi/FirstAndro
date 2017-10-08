@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.user_pc.testsktl.R;
+import com.example.user_pc.testsktl.andys.ClockActivity;
 import com.example.user_pc.testsktl.classwork12.Classwork12Activity;
 import com.example.user_pc.testsktl.classwork13.Classwork13Activity;
 import com.example.user_pc.testsktl.classwork14.Classwork14Activity;
@@ -161,7 +162,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HW4Activity.class);
                 startActivity(intent);
-                //это анимация по смене MainActivity.this на HW4Activity.class
+                //это анимация по смене MainActivity.this на ClockActivity.class
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
@@ -370,6 +371,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 MapsActivity.show(MainActivity.this);
+            }
+        });
+
+        Button andysButton = (Button) findViewById(R.id.andys_Button);
+        andysButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClockActivity.show(MainActivity.this);
             }
         });
 

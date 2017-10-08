@@ -13,5 +13,6 @@
     <color name="textFlagsColour">#ffffff</color>
     <color name="sktl">#a1239b</color>
 
+    <color name="sktlHiddenLight">#f5f5f5</color>
 
 </resources>

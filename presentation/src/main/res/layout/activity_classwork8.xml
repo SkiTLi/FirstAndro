@@ -13,11 +13,19 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/superTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@{viewModel.helloText}"
         android:onClick="@{()->viewModel.onSuperButtonClick()}"
         />
+<!--это добавили на последнем уроке-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="@{viewModel.helloText}"-->
+        <!--android:onClick="@{viewModel::onSecondButtonClick}"-->
+        <!--/>-->
 
     <!--android:onClick="@{()->viewModelInBaseActivity.onSuperButtonClick()}" должен работать клик-->
 

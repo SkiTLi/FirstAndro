@@ -61,8 +61,7 @@ public class Classwork13Activity extends FragmentActivity {
         });
     }
 
-    public static void showFragment(FragmentManager fragmentManager,
-                                    Fragment fragment, boolean addToBackStack) {
+    public static void showFragment(FragmentManager fragmentManager, Fragment fragment, boolean addToBackStack) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment, fragment.getClass().getName());
         if (addToBackStack) fragmentTransaction.addToBackStack(null);

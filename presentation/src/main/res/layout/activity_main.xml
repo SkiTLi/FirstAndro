@@ -23,6 +23,13 @@
             android:paddingLeft="20dp">
 
             <Button
+                android:id="@+id/andys_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Andys" />
+
+            <Button
                 android:id="@+id/dz1Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -59,7 +59,18 @@ public class Classwork8ViewModel implements BaseViewModel {
         Classwork8Activity.show(activity);
     }
 
-//часто явл источником утечки памяти т.к.есть вариат что пользователь выйдет из активити
+    public void onSecondButtonClick() {
+        Log.d("AAA", "on supre click");
+
+        Intent intent = new Intent(activity, Classwork4Activity.class);
+        activity.startActivity(intent);
+
+
+    }
+
+
+
+    //часто явл источником утечки памяти т.к.есть вариат что пользователь выйдет из активити
     //не использовать для объемных операций . тк нужно красиво из него выходить
     public class MyAsyncTak extends AsyncTask<Void, Integer, String> { // что-то, входящий, результат
 
